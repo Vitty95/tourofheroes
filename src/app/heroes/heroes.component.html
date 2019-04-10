@@ -1,0 +1,16 @@
+<!--inseriamo <h2> per il titolo e <li> per la lista-->
+
+  <!-- la direttiva *ngFor è un ripetitore per Angular, ovvero ripete l'elemento
+  host per ogni elemento della lista-->
+  <!--aggiungiamo (click) per indicare che quando l'utente clicca su un elemento 
+  della lista ovvero su un <li> angula esegue l'onSelect-->
+  <!--{class.selected]="hero === selectedHero} si aggiunge per poter identificare l'elemento che si vuole modellare con il css-->
+
+<h2>My Heroes</h2>
+<ul class="heroes">
+  <li *ngFor="let hero of heroes">
+    <a routerLink="/detail/{{hero.id}}">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </a>
+  </li>
+</ul>
